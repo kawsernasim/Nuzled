@@ -1,0 +1,25 @@
+@import "src/stylesheets/main.scss";
+.section {
+    margin: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
+    .section-title {
+        margin: 6px 10px;
+        float: left;
+        font-family: $fixed;
+        letter-spacing: -1px;
+        line-height: 22px;
+        font-weight: 700;
+        color: $midnight-blue;
+    }
+
+    .section-icon {
+        float: left;
+        width: 30px;
+        height: 30px;
+    }
+
+    .section-content {
+        margin: 50px 0px 20px 0px;
+        
+    }
+}

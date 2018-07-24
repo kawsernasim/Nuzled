@@ -1,0 +1,46 @@
+@import "src/stylesheets/main.scss";
+
+.accordion {
+  .dot {
+    height: 26px;
+    width: 26px;
+    //background-color: $blue;
+    border-radius: 50%;
+    background-color: $blue;
+    display: inline-block;
+    color: $midnight-blue;
+    float: left;
+    margin: 5px 5px 5px 0;
+  }
+
+  h4 {
+    margin: 6px 10px;
+    float: left;
+    font-family: $fixed;
+    letter-spacing: -1px;
+    line-height: 22px;
+    font-weight: 700;
+    color: $midnight-blue;
+  }
+}
+
+.content {
+  width: 100% !important;
+}
+
+.content.open {
+  .content-wrapper {
+    padding: 10px 40px 40px 40px;
+    max-height: 400px;
+  }
+}
+
+  .content-wrapper {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .25s ease-in;
+    padding: 0 40px;
+    width: 100% !important;
+  }
+  
+

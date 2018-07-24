@@ -1,0 +1,30 @@
+@import "src/stylesheets/main.scss";
+
+.review {
+    margin-top: 20px;
+}
+.student-name {
+    float: left;
+    margin-right: 10px;
+    
+}
+
+.reviewer-info {
+    font-family: $fixed;
+    color: $midnight-blue;
+
+    span {
+
+        margin-top: 50px;
+        overflow: hidden;
+    }
+}
+
+.review-stars {
+    padding-top:7px;
+}
+
+.review-text {
+    font-family: $fixed;
+    color: $black;
+}

@@ -1,0 +1,27 @@
+@import "src/stylesheets/main.scss";
+
+.quarter-section {
+    float: left;
+
+    .quarter-time {
+
+    }
+}
+
+.quarter-bar {
+    float: left;
+    margin: 0 20px 0 0px;
+
+    .hour-boxes {
+        &:last-child{
+            border-right: 1px black solid;
+        }
+        width: 20px;
+        height: 20px;
+        border-top: 1px black solid;
+        border-right: 0px black solid;
+        border-bottom: 1px black solid;
+        border-left: 1px black solid;
+        float: left;
+    }
+}

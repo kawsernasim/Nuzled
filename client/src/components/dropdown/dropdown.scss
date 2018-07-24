@@ -1,0 +1,63 @@
+@import "src/stylesheets/main.scss";
+#mount {
+    margin: 100px;  
+  }
+  
+  .dropdown {
+    position: relative;
+    background: #fafafa;
+    border: 1px solid $midnight-blue;
+    border-radius: 1px;
+    max-width: 100px;
+    color: $midnight-blue;
+    font-family: $fixed;
+    font-weight: 400;
+    margin: 70px 0 20px 0;
+    
+    &__arrow {
+      position: absolute;    
+      right: -10px;
+      top: -1px;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-radius: 3px;
+      color: $midnight-blue;
+    }
+    
+    &__list {
+      // opacity: 0;
+      transition: max-height .6s ease-out;
+      // transition: opacity .15s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      
+      &--active {
+        max-height: 1000px;
+        opacity: 1;
+      }
+    }
+    
+    &__list-item {
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      list-style: none;    
+      padding: 2px 10px 2px 10px;
+      
+      &--active {
+        background: $blue;
+      }
+      
+      &:hover {
+        background: $sky-blue;
+      }
+    }
+    
+    &__toggle {
+      &:hover {
+        background: $blue;
+      }
+      background: #fff;
+    }
+  }

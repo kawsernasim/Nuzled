@@ -1,0 +1,20 @@
+@import "src/stylesheets/main.scss";
+
+.list-title {
+    font-weight: 400;
+}
+
+.list {
+}
+
+.list .ul-list{
+    list-style-type: none;
+    padding: 0;
+    font-family: $fixed;
+}
+
+.list-item {
+    padding: 4px 0 4px 0;
+}
+
+

@@ -1,0 +1,64 @@
+@import "src/stylesheets/main.scss";
+
+h2 {
+    span {
+        font-weight: $fixedw;
+        font-size: 14px;
+        display: block;
+        padding-top: 5px;
+    }
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: $midnight-blue;
+}
+
+.name-location {
+    margin: 5px 0 0 30px;
+}
+
+.tagline-desc {
+    p {
+        font-weight: 400;
+    }
+
+    .tagline {
+        color: $midnight-blue;
+        font-weight: 700;
+    }
+
+    font-family: $fixed;
+    letter-spacing: -1px;
+    line-height: 22px;
+}
+
+.education {
+    font-family: $fixed;
+    letter-spacing: -1px;
+    h5 {
+        font-weight: 700;
+    }
+    h6 {
+        font-weight: 400;
+    }
+
+}
+
+.ratings{
+    float: left;
+    margin-right: 20px;
+    
+}
+
+.num-ratings {
+    padding-top: 2px;
+    color: $midnight-blue;
+    font-family: $fixed;
+}
+
+
+
+
+
+

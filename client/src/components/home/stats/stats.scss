@@ -1,0 +1,14 @@
+@import "src/stylesheets/main.scss";
+
+.stat {
+    font-family: $fixed;
+    letter-spacing: -1px;
+    color: $midnight-blue;
+    span {
+        font-weight: 700;
+    }
+}
+
+.accomplishments {
+    padding: 20px 0 20px 0;
+}

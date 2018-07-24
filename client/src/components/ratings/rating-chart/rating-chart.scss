@@ -1,0 +1,17 @@
+@import "src/stylesheets/main.scss";
+
+.bar {
+    width: 200px;
+    height: 20px;
+    background-color: #efefef;
+    float: left;
+    margin-right: 10px;
+}
+
+.stars-row {
+    padding: 2px;
+}
+
+.chart {
+    padding-bottom: 0px;
+}

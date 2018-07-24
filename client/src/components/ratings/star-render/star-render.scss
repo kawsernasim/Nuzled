@@ -1,0 +1,21 @@
+@import "src/stylesheets/main.scss";
+
+.stars {
+    width: 89px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars img {
+    margin: 1px;
+    width: 12px;
+    &:last-of-type {
+        padding: 0px;
+    }
+    &:first-of-type {
+        padding: 0px;
+    }
+
+}

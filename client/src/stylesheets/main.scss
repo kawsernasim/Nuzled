@@ -1,0 +1,42 @@
+//font-weight
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+//base font
+$base: 'Poppins';
+$basew: $regular;
+$basesize: 13px;
+$base-line-height: 1.4;
+
+// Fixed Font
+$fixed: 'Open Sans';
+$fixedsize: 13px;
+$fixedw: $regular;
+$fixed-line-height: 1.4;
+
+// Headings
+$header-font-weight: $bold;
+
+//Colors
+$midnight-blue: #2a526b;
+$dark-blue: #489ed8;
+$blue: #53c6ea;
+$sky-blue: #c1ecf7;
+$white-sky: #e8f9fc;
+$white: #e8f9fc;
+$black: #212120;
+
+//fixed-typography style
+
+h4 {
+    font-family: $fixed;
+    letter-spacing: -1px;
+    line-height: 22px;
+    font-weight: 700;
+    color: $midnight-blue;
+}
+
+body {
+    background-color: #f9f9f9;
+}
