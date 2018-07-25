@@ -22,8 +22,6 @@ import './home.scss';
 const Home = () => {
     const options = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-
-
     return (
         <div>
             <Grid>
