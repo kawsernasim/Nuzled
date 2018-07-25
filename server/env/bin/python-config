@@ -1,4 +1,4 @@
-#!/Users/kawsernasim/Desktop/flask/env/bin/python
+#!/Users/kawsernasim/Desktop/nuzled/server/env/bin/python
 
 import sys
 import getopt
