@@ -3,11 +3,19 @@ import logging
 
 # [START imports]
 from flask import Flask, render_template, request, url_for
+from flask_pymongo import PyMongo
 
 # [END imports]
 
 # [START create_app]
 app = Flask(__name__)
+
+app.config['MONGO_DBNAME'] = 'nuzled'
+app.config['MONGO_URI'] = 'mongodb://admin:Admin785@ds249311.mlab.com:49311/nuzled'
+
+mongo = PyMongo(app)
+
+
 # [END create_app]
 
 
@@ -17,7 +25,11 @@ def form():
     return render_template('index.html')
 # [END form]
 
-
+@app.route("/db")
+def dbtest():
+    user = mongo.db.users
+    user.insert({'name' : 'Kawser Nasim'})
+    return 'db is connected'
 
 @app.errorhandler(500)
 def server_error(e):
