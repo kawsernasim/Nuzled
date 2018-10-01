@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Grid, Row, Col, Form, FormGroup, FormControl, ControlLabel, Checkbox, HelpBlock, Radio, Button} from 'react-bootstrap';
 import FieldGroup from '../fields/fields';
+import axios from 'axios';
 
 class Reg extends Component {
 
@@ -27,7 +28,20 @@ class Reg extends Component {
     onChangeEmail = (e) => {this.setState({email: e.target.value});}
     onChangePassword = (e) => {this.setState({password: e.target.value});}
     onChangeGender = (e) => {this.setState({gender: e.target.value});}
-    onSubmit = (e) => {this.setState({name: e.target.value});}
+
+    onSubmit = (e) => {
+        e.preventDefault();
+        const adduser = {
+            firstname: this.state.firstname,
+            lastname: this.state.lastname,
+            email: this.state.email,
+            password: this.state.password,
+            gender: this.state.password
+        }
+
+        axios.post('http://localhost:4000/serverport/add', serverport)
+        .then(res => console.log(res.data));
+    }
 
     render() {   
         return (
