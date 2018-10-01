@@ -13,7 +13,9 @@ class Layout extends Component {
         return (
             <div>
                 <Header/>
+                <Home/>
                 <Reg/>
+                
                 Footer
             </div>
         )
