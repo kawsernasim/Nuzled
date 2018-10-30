@@ -6,9 +6,9 @@ import Reg from '../../components/reg/reg';
 
 class Layout extends Component {
     state ={
-
+    
     }
-
+    
     render() {
         return (
             <div>

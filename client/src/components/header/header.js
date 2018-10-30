@@ -20,8 +20,6 @@ const logo = () => {
 
 const Header = () => {
     return (
-
-
             <Navbar default collapseOnSelect>
                 <Navbar.Header>
                     {logo()}

@@ -12,7 +12,7 @@ class Reg extends Component {
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onChangeGender = this.onChangeGender.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
             firstname: '',
@@ -29,25 +29,58 @@ class Reg extends Component {
     onChangePassword = (e) => {this.setState({password: e.target.value});}
     onChangeGender = (e) => {this.setState({gender: e.target.value});}
 
-    onSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        const adduser = {
+        const user = {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email,
             password: this.state.password,
-            gender: this.state.password
+            gender: this.state.gender
         }
 
-        axios.post('http://localhost:4000/serverport/add', serverport)
-        .then(res => console.log(res.data));
+        console.log(user);
+
+        this.addUser(user);
     }
+
+    addUser = (data) => {
+
+        const options = {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data
+        }
+        console.log(options);
+
+        // axios.post('http://localhost:8080/register', options)
+        // .then(res =>{
+        //     console.log(res)
+        //     console.log(res.data)
+        // });
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:8080/register',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data
+        })
+        .then((response) => {
+            console.log(response);
+            console.log(response.data);
+        })
+    }
+
+    const 
 
     render() {   
         return (
             <div>
                 <Grid>
-                    <Form>
+                    <Form onSubmit={this.handleSubmit}>
                         <Row>
                             <Col sm={6}>
                                 <FieldGroup
@@ -55,6 +88,7 @@ class Reg extends Component {
                                     type="text"
                                     label="First Name"
                                     placeholder="Enter first name"
+                                    onChange = {this.onChangeFirstName}
                                 />
                             </Col>
 
@@ -64,6 +98,7 @@ class Reg extends Component {
                                     type="text"
                                     label="Last Name"
                                     placeholder="Enter last name"
+                                    onChange = {this.onChangeLastName}
                                 />
                             </Col>
                         </Row>
@@ -72,24 +107,27 @@ class Reg extends Component {
                             type="email"
                             label="Email address"
                             placeholder="Enter email"
+                            onChange = {this.onChangeEmail}
                         />
                         <FieldGroup 
                             id="formControlsPassword"
                             label="Password"
                             type="password" 
+                            onChange = {this.onChangePassword}
                         />
-                        <FieldGroup
+                        {/* <FieldGroup
                             id="formControlsFile"
                             type="file"
                             label="Profile Picture"
                             help="Upload image file"
-                        />
+                        /> */}
 
-                        <FormGroup controlId="formControlsSelect">
+                        <FormGroup controlId="formControlsSelect"> 
                             <ControlLabel>Gender</ControlLabel>
-                            <FormControl componentClass="select" placeholder="select">
-                                <option value="select">Male</option>
-                                <option value="other">Female</option>
+                            <FormControl componentClass="select" placeholder="select" onChange={this.onChangeGender}>
+                            <option value="select">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
                             </FormControl>
                         </FormGroup>
                         <Button type="submit">Submit</Button>
