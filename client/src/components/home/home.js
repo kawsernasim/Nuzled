@@ -1,221 +1,133 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
 import { Grid, Row, Col, Clearfix } from 'react-bootstrap';
-import Card from '../cards/card';
-import RatingBar from '../ratings/rating-bar/rating-bar';
-import Accordion from '../accordions/accordion-plus';
-import Education from '../home/education';
-import Dropdown from '../dropdown/dropdown';
-import Section from '../section/section';
-import Schedule from '../home/schedule/schedule';
-import List from '../list/list';
-import RatingChart from '../ratings/rating-chart/rating-chart';
-import Reviews from '../reviews/reviews';
-import Rank from '../home/rank/rank';
-import Sidebar from '../sidebar/sidebar';
-import Stats from '../home/stats/stats';
-import './avatar.scss';
 import './home.scss';
 
+class Home extends Component {
+    render() {
+        return (
+            <div>
+                <div className="intro">
+                    <Grid>
+                        <Row>
+                            <Col xs={6}>
+                                <div className="intro-message">
+                                    <h1>Get Connected
+                                    <span>Get Englightened</span></h1>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </div>
+
+                <div className="section-2">
+                    <Grid>
+                        <Row>
+                            <Col sm = {9}>
+                                <div className = "content-2">
+                                    <h2>Hire a tutor. Learn online.</h2>
+                                    <span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada quam elit, nec vestibulum elit auctor nec. 
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                        Nunc sit amet nulla semper, ultricies sapien sed, bibendum turpis. tur. 
+                                        Pellentesque at nunc nunc. Nunc sit amet nulla semper, ultricies sapien sed, bibendum turpis. tur. 
+                                        Pellentesque at nunc nunc.
+                                        </p>
+                                    </span>
+                                </div>
+
+                            </Col>
+                                
+                            <Col sm = {3}>
+                                <img className="computer-icon" src="/static/images/home/computer.svg" alt="computer"/>
+                            </Col>
+
+                        </Row>
+                    </Grid>
+                </div>
 
 
-const Home = () => {
-    const options = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                <div className = "section-3">
+                    <Grid>
+                        <Row>
+                            <div className = "section-title">
+                                <h2>How it works</h2>
+                            </div>
+                        </Row>
 
-    return (
-        <div>
-            <Grid>
-                <Row className="show-grid">
-                    <Col sm={9}>
-                        <Card
-                            hover = {false}
-                        >
-                            <Row>
-                                <Col xs={2}>
-                                    <img className="avatar" src="/static/images/dp.jpg" alt=""/>
-                                </Col>
-                                <Col xs={10}>
-                                    <div className="name-location" pulls-left>
-                                         <h2>
-                                            Kawser Nasim
-                                            <span>Dhaka, Bangladesh</span>
-                                            <span>
-                                                <RatingBar
-                                                    value = {4}
-                                                    type = "bar"
-                                                />
-                                            </span>
-                                        </h2>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col xs={12}>
-                                    <div className = "tagline-desc">
-                                        <h4 className = "tagline">Extraordinary teacher with 9 years experience</h4>
+                        <Row>
+                            <div className="hiw-icons">
+
+                                <div className="hiw-column">
+                                    <Col sm={3}>
+                                        <img src="/static/images/home/find.svg" alt="find" />
+                                        <h2 className="column-title">Find</h2>
                                         <span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada quam elit, nec vestibulum elit auctor nec. 
-                                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                                            Nunc sit amet nulla semper, ultricies sapien sed, bibendum turpis. tur. 
-                                            Pellentesque at nunc nunc. Nunc sit amet nulla semper, ultricies sapien sed, bibendum turpis. tur. 
-                                            Pellentesque at nunc nunc.
                                             </p>
                                         </span>
-                                    </div>
-                                </Col>
-                            </Row>
+                                    </Col>
+                                </div>
 
-                            <Row>
-                                <Col sm={12}>
-                                    <Accordion
-                                        title = "Education"
-                                    >
-                                        <Education/>
-                                    </Accordion>
-                                </Col>
-                            </Row>
+                                <div className="hiw-column">
+                                    <Col sm={3}>
+                                        <img src="/static/images/home/book.svg" alt="book" />
+                                        <h2 className="column-title">Book your session</h2>
+                                        <span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada quam elit, nec vestibulum elit auctor nec. 
+                                            </p>
+                                        </span>
+                                    </Col>
+                                </div>
 
-                            <Row>
-                                <Col sm={12}>
-                                    <Section
-                                        title = "Availability"
-                                        icon = "true"
-                                        fa = "false"
-                                        iconSrc = "clock.svg"
-                                    >
+                                <div className="hiw-column">
+                                    <Col sm={3}>
+                                        <img src="/static/images/home/learn.svg" alt="learn" />
+                                        <h2 className="column-title">Learn</h2> 
+                                        <span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada quam elit, nec vestibulum elit auctor nec. 
+                                            </p>
+                                        </span>
+                                    </Col>
+                                </div>
 
-                                        <Dropdown
-                                            options = {options}
-                                        /> 
+                                <div className="hiw-column">
+                                    <Col sm={3}>
+                                        <img src="/static/images/home/pay.svg" alt="pay" />
+                                        <h2 className="column-title">Pay</h2> 
+                                        <span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada quam elit, nec vestibulum elit auctor nec. 
+                                            </p>
+                                        </span>
+                                    </Col>
+                                </div>
+                            </div>
 
-                                        <Schedule/>
-
-                                    </Section>
-                                        
-                                </Col>
-
-                            </Row>
-
-                            <Row>
-                                <Col sm={12}>
-                                    <Section
-                                        title = "Subjects"
-                                        icon = "false"
-                                    >
-                                        <Row>
-                                            <Col sm={3}>
-                                                <List 
-                                                    items = {[
-                                                        'SAT',
-                                                        'ACT',
-                                                        'GRE',
-                                                        'IELTs',
-                                                    ]}
-                                                    title = "Test Prep"
-                                                />
-                                            </Col>
-                                            <Col sm={3}>
-                                                <List 
-                                                    items = {[
-                                                        'SAT',
-                                                        'ACT',
-                                                        'GRE',
-                                                        'IELTs',
-                                                    ]}
-                                                    title = "Test Prep"
-                                                />
-                                            </Col>
-                                            <Col sm={3}>
-                                                <List 
-                                                    items = {[
-                                                        'SAT',
-                                                        'ACT',
-                                                        'GRE',
-                                                        'IELTs',
-                                                    ]}
-                                                    title = "Test Prep"
-                                                />
-                                            </Col>                                 
-                                        </Row>
-                                    </Section>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col sm={12}>
-                                    <Section
-                                        title = "Ratings and Reviews"
-                                        icon = "false"
-                                    >
-                                        <div className="ratings-reviews">
-                                            <div className="ratings">
-                                                <RatingBar
-                                                    value = {4}
-                                                />
-                                            </div>
-                                            <h5 className="num-ratings">65 Ratings</h5>
-                                        </div>
-
-                                        <RatingChart/>
-
-                                        <Reviews />                   
-
-                                    </Section>
-
-                                </Col>
-                            </Row>
-                        </Card>
-                    </Col>
-
-                    <Col xs={3}>
-                        <Sidebar>
-
+                        </Row>
+                    </Grid>
+                </div>
+            
+                <div className = "section-4">
+                    <Grid>
                         <Row>
-                            <Col sm = {12}>
-                                <Rank/>
-                            </Col>
-                        </Row>    
+                            <div className = "section-title">
+                                <h2>Knowledge has no borders
+                                <span><br />Hire anyone from anywhere</span>
+                                </h2>
 
-                        <Row>
-                            <Col sm = {12}>
-                                <Stats 
-                                    title = "Sessions completed"
-                                    stat = "56"
+                                <div className="content-4">
+                                    <img className="globe" src="/static/images/home/globe.svg" alt="globe"/>
+                                </div>
+                                
+                            </div>
+                        </Row>
 
-                                />
-                            </Col>
-                        </Row>   
 
-                        <Row>
-                            <Col sm = {12}>
-                                <Stats 
-                                    title = "Hours Taught"
-                                    stat = "56"
-                                />
-                            </Col>
-                        </Row> 
-
-                        <Row>
-                            <Col sm = {12}>
-                                <Stats 
-                                    title = "Hours Taught"
-                                    stat = "56"
-                                    sub = {true}
-
-                                />
-                            </Col>
-                        </Row>                               
-                              
-                            
-                           
-
-                        </Sidebar>
-                    </Col>
-                </Row>
-            </Grid>
-
-        </div>
-    )
+                    </Grid>
+                </div>
+            
+            </div>
+        )
+    }
 }
 
 export default Home;
