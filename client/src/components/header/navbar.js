@@ -20,18 +20,16 @@ const NavigationItems = () => {
         {
             type: 'nav-items',
             text: 'Sign-up',
-            link: '/'
+            link: '/registration'
         }
     ]
 
     const addItems = () => {
         return items.map( (item, i) => {
-            return (
-                
+            return (                
                     <NavItem eventKey={i} componentClass={Link} to={item.link}>
                         {item.text}
                     </NavItem>
-                
             )
         }) 
     }

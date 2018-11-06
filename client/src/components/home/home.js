@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Clearfix } from 'react-bootstrap';
+import Button from '../buttons/button';
 import './home.scss';
 
 class Home extends Component {
@@ -124,6 +125,31 @@ class Home extends Component {
 
                     </Grid>
                 </div>
+
+                <div className = "section-5">
+                    <Grid>
+                        <Row>
+                            <div className = "section-title">
+                                <h2>Start teaching with Nuzled
+                                <span><br />We're dedicated to provide tutors with a platform to make a difference</span>
+                                </h2>
+
+                                <div className="content-5">
+                                    
+                                    <Button
+                                        text = "Join us today"
+                                        link = "http://google.com"
+                                    />
+
+                                </div>
+                                
+                            </div>
+                        </Row>
+
+
+                    </Grid>
+                </div>
+
             
             </div>
         )
